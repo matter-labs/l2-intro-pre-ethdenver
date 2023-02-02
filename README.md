@@ -1,14 +1,19 @@
 # Intro to Layer 2s: buidl on the zkEVM
 
-This repository contains all the code examples used in the "Introduction to L2s" workshop.
+This repository contains all the code examples used in the "Introduction to L2s" workshop previous to ETH Denver
 
-Slides are available here: https://docs.google.com/presentation/d/14i1j_DiLD3pCtFsT4V6g9VX1T-XJqd0ue1GldybI2Lk/edit?usp=sharing
+Slides are available here: https://docs.google.com/presentation/d/1_zWQRjUFX5ahiBMOjnoDiMAdjJ2-ozCs593HRCwflHU/edit?usp=sharing
 
 ## Workshop tasks
 
 ### POAP NFTs
 
-To receive a POAP NFT for completing these tasks, you need to follow the intructions mentioned during the workshop.
+To receive a POAP NFT for completing these tasks, you need to:
+
+1. Fork this repository
+2. Follow the tasks detailed below
+3. Create a PR with the changes mentioned in the tasks
+4. Once your PR is merged, you'll receive an email to claim the GitPOAP.
 
 ### Workshop important links
 
@@ -25,7 +30,7 @@ The [zkSync Portal](https://portal.zksync.io/) is the easiest way to deposit and
 
 However, if you don't have any GoerliETH, you can receive a small amount by using our [faucet](https://portal.zksync.io/faucet), which requires you to post a tweet as a way to verify your identity.
 
-On the other hand, here are a few other faucets that you can use:
+On the other hand, here are a few other faucets that you can use to get GoerLiETH, which then you can bridge to zkSync:
 
 - [Alchemy faucet](https://goerlifaucet.com/)
 - [PoW faucet](https://goerli-faucet.pk910.de/)
@@ -47,7 +52,7 @@ import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-deploy";
 ```
 
-Secondly, it includes the `zksolc` object which contains the properties of the compiler. It comes with the minimal configuration but you can learn more about the [zksolc configuration here](https://v2-docs.zksync.io/api/hardhat/plugins.html#hardhat-zksync-solc).
+Secondly, it includes the `zksolc` object which contains specific properties of the compiler. It comes with the minimal configuration but you can learn more about the [zksolc configuration here](https://v2-docs.zksync.io/api/hardhat/plugins.html#hardhat-zksync-solc).
 
 An last, the networks are defined with the following parameters:
 
@@ -59,6 +64,8 @@ An last, the networks are defined with the following parameters:
 
 The `url` and `ethNetwork` are the RPC endpoints of the L2 and L1 and the `zksync` flag is used to indicate Hardhat if it should use the zksync compiler and deployment plugins.
 
+Note: with "goerli", the project will use the default providers from ethers.
+
 ### 3. Deploy and verify the `Greeter` contract
 
 The zkSync-CLI sample project includes a `Greeter` contract and a deploy script. The [`Greeter` contract](./contracts/Greeter.sol) stores a message on chain which can be retrieved by calling the read method `greet()` and can be updated by calling the method `setGreeting(_message)`.
@@ -68,6 +75,8 @@ To compile the contract, run `yarn hardhat compile`. You'll notice that the fold
 To deploy the contract, just set your wallet's private key in the `.env` file (you'll have to rename it first), and run the command `yarn hardhat deploy-zksync --script deploy-greeter.ts`.
 
 To verify the contract you can use the [zkSync Explorer](https://goerli.explorer.zksync.io/). You'll have to select the solidity and zksolc compiler versions to match the ones from the [`hardhat.config.ts` file](./hardhat.config.ts) and also enter the constructor params, which are printed in the terminal by the [`deploy-greeter.ts` script](./deploy/deploy-greeter.ts).
+
+> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md] file following the same format.
 
 ### 4. Create and deploy an ERC20 contract
 
@@ -80,6 +89,10 @@ To compile the contract, just run `yarn hardhat compile` again.
 - The included [`deploy-erc20.ts`](./deploy/deploy-erc20.ts) script will deploy this contract.
 - The included [`use-erc20.ts`](./deploy/use-erc20.ts) script will do a transfer of tokens between two accounts and return its balances.
 
+**Note** To verify contracts that include imports of other contracts and libraries (like Openzeppelin contracts 😉), you'd need to flatten it first! Learn more about [flattening contracts in our docs](https://v2-docs.zksync.io/api/tools/block-explorer/contract-verification.html#verifying-contracts-using-the-zksync-block-explorer)
+
+> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md] file following the same format.
+
 ### 5. Create and deploy an ERC721 contract
 
 To showcase the compatibility with the standard NFT token, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc721) to create an ERC721 contract.
@@ -90,6 +103,8 @@ To compile the contract, just run `yarn hardhat compile` again.
 
 - The included [`deploy-erc721.ts`](./deploy/deploy-erc721.ts) script will deploy this contract.
 - The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
+
+> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md] file following the same format.
 
 ## Project structure
 
