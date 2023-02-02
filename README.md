@@ -1,4 +1,6 @@
-# Intro to Layer 2s: buidl on the zkEVM
+# Intro to Layer 2s: buidl on the zkEVM (pre ETH Denver edition)
+
+![](./ETHDenver_2023.png)
 
 This repository contains all the code examples used in the "Introduction to L2s" workshop previous to ETH Denver
 
@@ -76,7 +78,7 @@ To deploy the contract, just set your wallet's private key in the `.env` file (y
 
 To verify the contract you can use the [zkSync Explorer](https://goerli.explorer.zksync.io/). You'll have to select the solidity and zksolc compiler versions to match the ones from the [`hardhat.config.ts` file](./hardhat.config.ts) and also enter the constructor params, which are printed in the terminal by the [`deploy-greeter.ts` script](./deploy/deploy-greeter.ts).
 
-> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md] file following the same format.
+> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
 
 ### 4. Create and deploy an ERC20 contract
 
@@ -91,7 +93,7 @@ To compile the contract, just run `yarn hardhat compile` again.
 
 **Note** To verify contracts that include imports of other contracts and libraries (like Openzeppelin contracts 😉), you'd need to flatten it first! Learn more about [flattening contracts in our docs](https://v2-docs.zksync.io/api/tools/block-explorer/contract-verification.html#verifying-contracts-using-the-zksync-block-explorer)
 
-> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md] file following the same format.
+> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
 
 ### 5. Create and deploy an ERC721 contract
 
@@ -104,7 +106,7 @@ To compile the contract, just run `yarn hardhat compile` again.
 - The included [`deploy-erc721.ts`](./deploy/deploy-erc721.ts) script will deploy this contract.
 - The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
 
-> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md] file following the same format.
+> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
 
 ## Project structure
 
