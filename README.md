@@ -1,4 +1,4 @@
-# Intro to Layer 2s: buidl on the zkEVM (pre ETH Denver edition)
+# Intro to Layer 2s: buidl on the zkEVM _(pre ETH Denver edition)_
 
 ![](./ETHDenver_2023.png)
 
