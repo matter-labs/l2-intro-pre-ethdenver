@@ -6,6 +6,30 @@ This repository contains all the code examples used in the "Introduction to L2s"
 
 Slides are available here: https://docs.google.com/presentation/d/1_zWQRjUFX5ahiBMOjnoDiMAdjJ2-ozCs593HRCwflHU/edit?usp=sharing
 
+## Project structure
+
+Projects created with the zkSync-CLI have the following structure.
+
+- `/contracts`: smart contracts.
+- `/deploy`: deployment and contract interaction scripts.
+- `/test`: test files
+- `hardhat.config.ts`: configuration file.
+
+## Commands
+
+- `yarn hardhat compile` will compile the contracts.
+- `yarn hardhat deploy-zksync --script scriptFILE.ts` will execute the script from the `/deploy` folder (e.g `yarn hardhat deploy-zksync --script deploy-greeter.ts`). Requires [environment variable setup](#environment-variables).
+
+### Environment variables
+
+In order to prevent users to leak private keys, this project includes the `dotenv` package which is used to load environment variables. It's used to load the wallet private key, required to run the deploy script.
+
+To use it, rename `.env.example` to `.env` and enter your private key.
+
+```
+WALLET_PRIVATE_KEY=123cde574ccff....
+```
+
 ## Workshop tasks
 
 ### POAP NFTs
@@ -45,7 +69,9 @@ To install it, just run `sudo npm i -g zksync-cli@latest` (enter your system pas
 
 To create a new project, just run `zksync-cli create NAME_OF_YOUR_PROJECT`. This will create a new folder with the project name and download a sample project inside it.
 
-It's very similar to any other Hardhat project, but the `hardhat.config.ts` file includes some zkSync-specific properties.
+**Note** Once created, run `cd NAME_OF_YOUR_PROJECT` to enter the project directory. You'll have to run the commands to compile contracts and run scripts from this folder.
+
+The project created is very similar to any other Hardhat project, but the `hardhat.config.ts` file includes some zkSync-specific properties.
 
 First, it imports a few dependencies used to compile and deploy our contracts:
 
@@ -55,6 +81,14 @@ import "@matterlabs/hardhat-zksync-deploy";
 ```
 
 Secondly, it includes the `zksolc` object which contains specific properties of the compiler. It comes with the minimal configuration but you can learn more about the [zksolc configuration here](https://v2-docs.zksync.io/api/hardhat/plugins.html#hardhat-zksync-solc).
+
+```js
+zksolc: {
+  version: "1.2.2",
+  compilerSource: "binary",
+  settings: {},
+},
+```
 
 An last, the networks are defined with the following parameters:
 
@@ -66,7 +100,7 @@ An last, the networks are defined with the following parameters:
 
 The `url` and `ethNetwork` are the RPC endpoints of the L2 and L1 and the `zksync` flag is used to indicate Hardhat if it should use the zksync compiler and deployment plugins.
 
-Note: with "goerli", the project will use the default providers from ethers.
+**Note** With "goerli", the project will use the default providers from ethers, but you can change that for an RPC endpoint from
 
 ### 3. Deploy and verify the `Greeter` contract
 
@@ -78,6 +112,8 @@ To deploy the contract, just set your wallet's private key in the `.env` file (y
 
 To verify the contract you can use the [zkSync Explorer](https://goerli.explorer.zksync.io/). You'll have to select the solidity and zksolc compiler versions to match the ones from the [`hardhat.config.ts` file](./hardhat.config.ts) and also enter the constructor params, which are printed in the terminal by the [`deploy-greeter.ts` script](./deploy/deploy-greeter.ts).
 
+**Note** Make sure you've configured your private key in the `.env` file [as described above](#environment-variables).
+
 > GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
 
 ### 4. Create and deploy an ERC20 contract
@@ -85,6 +121,8 @@ To verify the contract you can use the [zkSync Explorer](https://goerli.explorer
 To showcase the compatibility with the starndard token contract, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract.
 
 We'll choose an ERC20, Burnable, Pausable and Snapshot. We can copy the contract code and the contract and put it in the `contracts` folder as is (check out file [zkToken.sol](./contracts/zkToken.sol)).
+
+As this contract uses some dependencies from OpenZeppelin, we'll have to install them with `yarn add -D @openzeppelin/contracts`.
 
 To compile the contract, just run `yarn hardhat compile` again.
 
@@ -107,30 +145,6 @@ To compile the contract, just run `yarn hardhat compile` again.
 - The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
 
 > GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
-
-## Project structure
-
-Projects created with the zkSync-CLI have the following structure.
-
-- `/contracts`: smart contracts.
-- `/deploy`: deployment and contract interaction scripts.
-- `/test`: test files
-- `hardhat.config.ts`: configuration file.
-
-## Commands
-
-- `yarn hardhat compile` will compile the contracts.
-- `yarn hardhat deploy-zksync --script scriptFILE.ts` will execute the script from the `/deploy` folder (e.g `yarn hardhat deploy-zksync --script deploy-greeter.ts`). Requires [environment variable setup](#environment-variables).
-
-### Environment variables
-
-In order to prevent users to leak private keys, this project includes the `dotenv` package which is used to load environment variables. It's used to load the wallet private key, required to run the deploy script.
-
-To use it, rename `.env.example` to `.env` and enter your private key.
-
-```
-WALLET_PRIVATE_KEY=123cde574ccff....
-```
 
 ## Official Links
 
