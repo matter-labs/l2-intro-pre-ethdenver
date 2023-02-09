@@ -15,4 +15,4 @@ Contribute by adding the contracts you've deployed to zkSync **to the bottom of 
 - [0x22864051E7473bB29ecE8fb87636780D73F30DA1](https://goerli.explorer.zksync.io/address/0x22864051E7473bB29ecE8fb87636780D73F30DA1)
 - [0x3Cd13aDAE82a2eb5E7152Ba24cc1826fADeAda61](https://goerli.explorer.zksync.io/address/0x3Cd13aDAE82a2eb5E7152Ba24cc1826fADeAda61)
 - [0x7505cC3dFb742C66335D171D34Be28aC980C8ddB](https://goerli.explorer.zksync.io/address/0x7505cC3dFb742C66335D171D34Be28aC980C8ddB)
-
+- [0x45AB0847bBc0Ff92Bb06d4921999f0CEFFeEA277](https://goerli.explorer.zksync.io/address/0x45AB0847bBc0Ff92Bb06d4921999f0CEFFeEA277)
