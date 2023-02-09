@@ -118,7 +118,7 @@ To verify the contract you can use the [zkSync Explorer](https://goerli.explorer
 
 ### 4. Create and deploy an ERC20 contract
 
-To showcase the compatibility with the starndard token contract, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract.
+To showcase the compatibility with the standard token contract, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract.
 
 We'll choose an ERC20, Burnable, Pausable and Snapshot. We can copy the contract code and the contract and put it in the `contracts` folder as is (check out file [zkToken.sol](./contracts/zkToken.sol)).
 
