@@ -39,7 +39,7 @@ To receive a POAP NFT for completing these tasks, you need to:
 1. Fork this repository
 2. Follow the tasks detailed below
 3. Create a PR with the changes mentioned in the tasks
-4. Once your PR is merged, you'll receive an email to claim the GitPOAP.
+4. Once your PR is merged, you'll be able to claim the GitPOAP the next day on [Gitpoap.io](https://www.gitpoap.io/)
 
 ### Workshop important links
 
@@ -145,6 +145,8 @@ To compile the contract, just run `yarn hardhat compile` again.
 - The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
 
 > GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
+
+
 
 ## Official Links
 
