@@ -2,7 +2,9 @@
 
 ![](./ETHDenver_2023.png)
 
-This repository contains all the code examples used in the "Introduction to L2s" workshop previous to ETH Denver
+This repository contains all the code examples used in the "Introduction to L2s" workshop previous to ETH Denver. 
+
+🎬 [Watch the recording here](https://www.youtube.com/watch?v=8oBbIjgT5mM)
 
 Slides are available here: https://docs.google.com/presentation/d/1_zWQRjUFX5ahiBMOjnoDiMAdjJ2-ozCs593HRCwflHU/edit?usp=sharing
 
