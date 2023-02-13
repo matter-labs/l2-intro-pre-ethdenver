@@ -22,6 +22,7 @@ Contribute by adding the contracts you've deployed to zkSync **to the bottom of 
 - [0x9B22ee6db9dF5560ce62d42e2DD188d6bECFE15f](https://goerli.explorer.zksync.io/address/0x9B22ee6db9dF5560ce62d42e2DD188d6bECFE15f)
 - [0xB04Bb4A0946595a04e9Fa199397Ff5E8157B94a5](https://goerli.explorer.zksync.io/address/0xB04Bb4A0946595a04e9Fa199397Ff5E8157B94a5)
 - [0x5a2D79df9f378f939D1688ba82c6d2f80b410627](https://goerli.explorer.zksync.io/address/0x5a2D79df9f378f939D1688ba82c6d2f80b410627)
+- [0xF069fFE68C8AcD67D313C0a8351C9270f496726a](https://goerli.explorer.zksync.io/address/0xF069fFE68C8AcD67D313C0a8351C9270f496726a)
 - [0xd084a93FF1C0e37e1B28299b240a4FACAE6c10e9](https://goerli.explorer.zksync.io/address/0xd084a93FF1C0e37e1B28299b240a4FACAE6c10e9)
 - [0xb85bDd7b0335289Ba01780C238E0dfa2782Cb558](https://goerli.explorer.zksync.io/address/0xb85bDd7b0335289Ba01780C238E0dfa2782Cb558)
 - [0x4711d8841EbAff7db2A40ed85C61F701e325da7C](https://goerli.explorer.zksync.io/address/0x4711d8841EbAff7db2A40ed85C61F701e325da7C)
