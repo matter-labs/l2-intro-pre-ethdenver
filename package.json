@@ -8,7 +8,6 @@
   "devDependencies": {
     "@matterlabs/hardhat-zksync-deploy": "^0.6.1",
     "@matterlabs/hardhat-zksync-solc": "^0.3.13",
-    "@matterlabs/hardhat-zksync-verify": "^0.1.1",
     "@openzeppelin/contracts": "^4.8.1",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
