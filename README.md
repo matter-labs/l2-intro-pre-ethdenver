@@ -8,6 +8,8 @@ This repository contains all the code examples used in the "Introduction to L2s"
 
 Slides are available here: https://docs.google.com/presentation/d/1_zWQRjUFX5ahiBMOjnoDiMAdjJ2-ozCs593HRCwflHU/edit?usp=sharing
 
+> This repo is no longer open to contributions & PRs.
+
 ## Project structure
 
 Projects created with the zkSync-CLI have the following structure.
@@ -34,14 +36,6 @@ WALLET_PRIVATE_KEY=123cde574ccff....
 
 ## Workshop tasks
 
-### POAP NFTs
-
-To receive a POAP NFT for completing these tasks, you need to:
-
-1. Fork this repository
-2. Follow the tasks detailed below
-3. Create a PR with the changes mentioned in the tasks
-4. Once your PR is merged, you'll be able to claim the GitPOAP the next day on [Gitpoap.io](https://www.gitpoap.io/)
 
 ### Workshop important links
 
@@ -116,8 +110,6 @@ To verify the contract you can use the [zkSync Explorer](https://goerli.explorer
 
 **Note** Make sure you've configured your private key in the `.env` file [as described above](#environment-variables).
 
-> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
-
 ### 4. Create and deploy an ERC20 contract
 
 To showcase the compatibility with the standard token contract, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract.
@@ -133,8 +125,6 @@ To compile the contract, just run `yarn hardhat compile` again.
 
 **Note** To verify contracts that include imports of other contracts and libraries (like Openzeppelin contracts 😉), you'd need to flatten it first! Learn more about [flattening contracts in our docs](https://v2-docs.zksync.io/api/tools/block-explorer/contract-verification.html#verifying-contracts-using-the-zksync-block-explorer)
 
-> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
-
 ### 5. Create and deploy an ERC721 contract
 
 To showcase the compatibility with the standard NFT token, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc721) to create an ERC721 contract.
@@ -145,9 +135,6 @@ To compile the contract, just run `yarn hardhat compile` again.
 
 - The included [`deploy-erc721.ts`](./deploy/deploy-erc721.ts) script will deploy this contract.
 - The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
-
-> GitPOAP! Once deployed and verified, add your contract to the [Deployments.md](./Deployments.md) file following the same format.
-
 
 
 ## Official Links
