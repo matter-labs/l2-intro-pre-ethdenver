@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @Author: LongWeiYi
+ * @Date: 2023-02-15 14:35:21
+ * @LastEditors: LWY😊
+ * @LastEditTime: 2023-02-15 15:19:29
+ * @FilePath: \l2-intro-pre-ethdenver\Deployments.md
+-->
 ## List of deployed contracts
 
 Contribute by adding the contracts you've deployed to zkSync **to the bottom of the list**. Include a link to the [zkSync explorer](https://goerli.explorer.zksync.io/).
@@ -47,3 +55,4 @@ Contribute by adding the contracts you've deployed to zkSync **to the bottom of 
 - [0x19691f8afA63A2fD1303b1FbC9881C3bA19217D5](https://goerli.explorer.zksync.io/address/0x19691f8afA63A2fD1303b1FbC9881C3bA19217D5)
 - [0xA896f8147Fc7334b77c4a9d3b17a77927Dbb905c](https://goerli.explorer.zksync.io/address/0xA896f8147Fc7334b77c4a9d3b17a77927Dbb905c)
 - [0xA7Bf27165831B61bd25587322A0DD5FFED52ba33](https://goerli.explorer.zksync.io/address/0xA7Bf27165831B61bd25587322A0DD5FFED52ba33)
+- [0x80daEABF7e3b72A72a4907795743A0c9380D3052](https://goerli.explorer.zksync.io/address/0x80daEABF7e3b72A72a4907795743A0c9380D3052)
