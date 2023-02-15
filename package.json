@@ -6,23 +6,29 @@
   "author": "Antonio <aug@matterlabs.dev>",
   "license": "MIT",
   "devDependencies": {
+    "@ethersproject/hash": "^5.7.0",
+    "@ethersproject/web": "^5.7.1",
     "@matterlabs/hardhat-zksync-deploy": "^0.6.1",
-    "@matterlabs/hardhat-zksync-solc": "^0.3.13",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.14",
     "@openzeppelin/contracts": "^4.8.1",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
+    "@types/node": "^18.13.0",
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
-    "hardhat": "^2.12.4",
+    "hardhat": "^2.12.7",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4",
-    "zksync-web3": "^0.13.0"
+    "typescript": "^4.9.5",
+    "zksync-web3": "^0.13.1"
   },
   "scripts": {
     "test": "NODE_ENV=test hardhat test --network hardhat",
     "deploy": "yarn hardhat deploy-zksync --script deploy-greeter.ts",
     "greet": "yarn hardhat deploy-zksync --script use-greeter.ts"
+  },
+  "dependencies": {
+    "@matterlabs/hardhat-zksync-verify": "^0.1.1"
   }
 }
