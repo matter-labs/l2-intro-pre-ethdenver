@@ -24,5 +24,8 @@
     "test": "NODE_ENV=test hardhat test --network hardhat",
     "deploy": "yarn hardhat deploy-zksync --script deploy-greeter.ts",
     "greet": "yarn hardhat deploy-zksync --script use-greeter.ts"
+  },
+  "dependencies": {
+    "@matterlabs/hardhat-zksync-verify": "^0.1.1"
   }
 }
